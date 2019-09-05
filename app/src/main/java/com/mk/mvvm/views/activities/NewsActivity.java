@@ -8,10 +8,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.util.Log;
 
 import com.mk.mvvm.R;
-import com.mk.mvvm.models.ArticleModel;
+import com.mk.mvvm.models.news.ArticleModel;
 import com.mk.mvvm.viewmodels.NewsViewModel;
 import com.mk.mvvm.views.adapters.NewsRecyclerAdapter;
 

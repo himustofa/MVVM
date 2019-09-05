@@ -1,6 +1,6 @@
 package com.mk.mvvm.repositories.retrofit;
 
-import com.mk.mvvm.models.ResponseModel;
+import com.mk.mvvm.models.news.ResponseModel;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

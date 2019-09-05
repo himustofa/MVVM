@@ -1,4 +1,4 @@
-package com.mk.mvvm.models;
+package com.mk.mvvm.models.news;
 
 import com.google.gson.annotations.SerializedName;
 

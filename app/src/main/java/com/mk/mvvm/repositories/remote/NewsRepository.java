@@ -6,8 +6,8 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.MutableLiveData;
 
 import com.google.gson.Gson;
-import com.mk.mvvm.models.ArticleModel;
-import com.mk.mvvm.models.ResponseModel;
+import com.mk.mvvm.models.news.ArticleModel;
+import com.mk.mvvm.models.news.ResponseModel;
 import com.mk.mvvm.repositories.retrofit.RetrofitClient;
 import com.mk.mvvm.utils.ConstantKey;
 

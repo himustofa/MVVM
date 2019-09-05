@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.mk.mvvm.models.ArticleModel;
+import com.mk.mvvm.models.news.ArticleModel;
 import com.mk.mvvm.repositories.remote.NewsRepository;
 
 import java.util.ArrayList;

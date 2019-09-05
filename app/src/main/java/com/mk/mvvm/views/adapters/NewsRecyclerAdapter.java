@@ -15,7 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.mk.mvvm.R;
-import com.mk.mvvm.models.ArticleModel;
+import com.mk.mvvm.models.news.ArticleModel;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

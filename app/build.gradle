@@ -36,14 +36,25 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    //===============================================| Android Jetpack Components
-    def lifecycle_version = "2.0.0"
+    //===============================================| Jetpack Component : Room persistence library
+    implementation "androidx.room:room-runtime:2.2.0-beta01"
+    // optional - RxJava support for Room
+    implementation "androidx.room:room-rxjava2:2.2.0-beta01"
+    annotationProcessor "androidx.room:room-compiler:2.2.0-beta01"
+    // Test helpers
+    testImplementation "androidx.room:room-testing:2.2.0-beta01"
+    //===============================================| Jetpack Components : Lifecycle-Aware, ViewModel and LiveData
     // ViewModel and LiveData
-    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-extensions:2.0.0"
     // alternately - if using Java8, use the following instead of lifecycle-compiler
-    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-common-java8:2.0.0"
     // optional - Test helpers for LiveData
-    testImplementation "androidx.arch.core:core-testing:$lifecycle_version"
+    testImplementation "androidx.arch.core:core-testing:2.0.1"
+    //===============================================| Jetpack Component : Paging library
+    def paging_version = "2.1.0"
+    //implementation "androidx.paging:paging-runtime:$paging_version"
+    // optional - RxJava support
+    //implementation "androidx.paging:paging-rxjava2:$paging_version"
     //===============================================| Design, CardView
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'androidx.cardview:cardview:1.0.0'

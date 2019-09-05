@@ -2,16 +2,11 @@ package com.mk.mvvm.views.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
-import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.OrientationHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.annotation.SuppressLint;
-import android.content.Context;
 import android.os.Bundle;
 
 import com.mk.mvvm.R;
@@ -20,11 +15,11 @@ import com.mk.mvvm.viewmodels.UserViewModel;
 import com.mk.mvvm.views.adapters.UserAdapter;
 
 import java.util.ArrayList;
-import java.util.List;
 
 //Help: CodingWithMitch
 public class UsersActivity extends AppCompatActivity {
 
+    private static final String TAG = "UsersActivity";
     private RecyclerView mRecyclerView;
     private UserAdapter mAdapter;
     private UserViewModel mUserViewModel;
