@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.mk.mvvm.R;
-import com.mk.mvvm.views.activities.room.CustomerActivity;
+import com.mk.mvvm.views.activities.viewmodel.MyActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,6 +15,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        startActivity(new Intent(new Intent(this, CustomerActivity.class)));
+        startActivity(new Intent(new Intent(this, MyActivity.class)));
     }
 }
