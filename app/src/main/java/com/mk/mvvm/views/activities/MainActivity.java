@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.mk.mvvm.R;
+import com.mk.mvvm.views.activities.room.CustomerActivity;
 
 public class MainActivity extends AppCompatActivity {
 

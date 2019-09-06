@@ -1,4 +1,4 @@
-package com.mk.mvvm.views.activities;
+package com.mk.mvvm.views.activities.room;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.LiveData;

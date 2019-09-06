@@ -1,4 +1,4 @@
-package com.mk.mvvm.views.activities;
+package com.mk.mvvm.views.activities.viewmodel;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
@@ -10,33 +10,32 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 import com.mk.mvvm.R;
-import com.mk.mvvm.models.news.ArticleModel;
-import com.mk.mvvm.viewmodels.NewsViewModel;
-import com.mk.mvvm.views.adapters.NewsRecyclerAdapter;
+import com.mk.mvvm.models.User;
+import com.mk.mvvm.viewmodels.UserViewModel;
+import com.mk.mvvm.views.adapters.UserAdapter;
 
 import java.util.ArrayList;
 
-public class NewsActivity extends AppCompatActivity {
+//Help: CodingWithMitch
+public class UsersActivity extends AppCompatActivity {
 
-    private static final String TAG = "NewsActivity";
+    private static final String TAG = "UsersActivity";
     private RecyclerView mRecyclerView;
-    private NewsRecyclerAdapter mAdapter;
-    private NewsViewModel mNewsViewModel;
-    private ArrayList<ArticleModel> mArticles = new ArrayList<>();
+    private UserAdapter mAdapter;
+    private UserViewModel mUserViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_news);
+        setContentView(R.layout.activity_users);
 
-        mRecyclerView = (RecyclerView) findViewById(R.id.news_recycler);
+        mRecyclerView = (RecyclerView) findViewById(R.id.user_list_recycler_view);
 
         //Receive the data and observe the data from view model
-        mNewsViewModel = ViewModelProviders.of(this).get(NewsViewModel.class); //Initialize view model
-        mNewsViewModel.getUsers().observe(this, new Observer<ArrayList<ArticleModel>>() {
+        mUserViewModel = ViewModelProviders.of(this).get(UserViewModel.class); //Initialize view model
+        mUserViewModel.getUsers().observe(this, new Observer<ArrayList<User>>() {
             @Override
-            public void onChanged(ArrayList<ArticleModel> arrayList) {
-                mArticles.addAll(arrayList);
+            public void onChanged(ArrayList<User> users) {
                 mAdapter.notifyDataSetChanged();
             }
         });
@@ -45,7 +44,7 @@ public class NewsActivity extends AppCompatActivity {
     }
 
     private void initRecyclerView() {
-        mAdapter = new NewsRecyclerAdapter(this, mArticles); //mUserViewModel.getUsers().getValue()
+        mAdapter = new UserAdapter(this, mUserViewModel.getUsers().getValue());
         //mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
