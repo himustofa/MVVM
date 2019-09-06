@@ -2,6 +2,7 @@ package com.mk.mvvm.viewmodels;
 
 import android.util.Log;
 
+import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.mk.mvvm.repositories.remote.MyRepository;
@@ -15,15 +16,25 @@ public class MyViewModel extends ViewModel {
         this.mRepository = MyRepository.getInstance();
     }
 
-    public String getNumber() {
-        return mRepository.getNumber();
-    }
-
     @Override
     protected void onCleared() {
         super.onCleared();
         Log.d(TAG, "onCleared");
     }
+
+    //===============================================| ViewModel with Lifecycle
+    /*public String getNumber() {
+        return mRepository.getNumber();
+    }*/
+
+    //===============================================| ViewModel with LiveData
+    public MutableLiveData<String> getNumber() {
+        return mRepository.getNumber();
+    }
+    public void createRandomNumber() {
+        mRepository.createRandomNumber();
+    }
+
 }
 
 /*
